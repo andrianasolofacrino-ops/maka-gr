@@ -1,53 +1,68 @@
 function Contact() {
   return (
-    <div style={{ backgroundColor: '#0A0A0A', minHeight: '100vh', padding: '4rem 2rem' }}>
+    <div className="bg-[#0A0A0A] min-h-screen px-8 py-16">
 
-      <h1 style={{ color: '#D4AF37', fontSize: '3rem', textAlign: 'center', marginBottom: '1rem' }}>
+      <h1 className="text-[#D4AF37] text-5xl font-bold text-center mb-4">
         COLLABORONS ENSEMBLE
       </h1>
 
-      <p style={{ color: '#F5F5F0', textAlign: 'center', fontSize: '1.1rem', marginBottom: '3rem' }}>
-        Artiste · ingenieur · Entrepreneur — je suis disponible.
+      <p className="text-[#F5F5F0] text-center text-lg mb-16">
+        Artiste · Développeur · Entrepreneur — je suis disponible.
       </p>
 
-      <div style={{ maxWidth: '600px', margin: '0 auto' }}>
+      <div className="max-w-2xl mx-auto">
 
-        <div style={{ backgroundColor: '#1A1A1A', border: '1px solid #D4AF37', borderRadius: '8px', padding: '2rem', marginBottom: '2rem' }}>
-          
-          <h2 style={{ color: '#D4AF37', marginBottom: '1.5rem' }}>📩 Envoie-moi un message</h2>
+        <div className="bg-[#1A1A1A] border border-[#D4AF37] rounded-lg p-8 mb-8">
+
+          <h2 className="text-[#D4AF37] text-2xl font-bold mb-6">
+            📩 Envoie-moi un message
+          </h2>
 
           <input
             type="text"
             placeholder="Ton nom"
-            style={{ width: '100%', backgroundColor: '#0A0A0A', border: '1px solid #D4AF37', borderRadius: '4px', padding: '0.8rem', color: '#F5F5F0', marginBottom: '1rem', boxSizing: 'border-box' }}
+            className="w-full bg-[#0A0A0A] border border-[#D4AF37] rounded px-4 py-3 text-[#F5F5F0] mb-4 outline-none focus:border-[#F0D060] transition-colors duration-300"
           />
 
           <input
             type="email"
             placeholder="Ton email"
-            style={{ width: '100%', backgroundColor: '#0A0A0A', border: '1px solid #D4AF37', borderRadius: '4px', padding: '0.8rem', color: '#F5F5F0', marginBottom: '1rem', boxSizing: 'border-box' }}
+            className="w-full bg-[#0A0A0A] border border-[#D4AF37] rounded px-4 py-3 text-[#F5F5F0] mb-4 outline-none focus:border-[#F0D060] transition-colors duration-300"
           />
 
           <textarea
             placeholder="Ton message..."
             rows={5}
-            style={{ width: '100%', backgroundColor: '#0A0A0A', border: '1px solid #D4AF37', borderRadius: '4px', padding: '0.8rem', color: '#F5F5F0', marginBottom: '1.5rem', boxSizing: 'border-box', resize: 'vertical' }}
+            className="w-full bg-[#0A0A0A] border border-[#D4AF37] rounded px-4 py-3 text-[#F5F5F0] mb-6 outline-none focus:border-[#F0D060] transition-colors duration-300 resize-none"
           />
 
-          <button style={{ width: '100%', backgroundColor: '#D4AF37', color: '#0A0A0A', border: 'none', padding: '1rem', fontSize: '1rem', fontWeight: 'bold', borderRadius: '4px', cursor: 'pointer' }}>
+          <button className="w-full bg-[#D4AF37] text-[#0A0A0A] py-4 font-bold text-lg rounded hover:bg-[#F0D060] transition-colors duration-300">
             Envoyer le message 🦅
           </button>
 
         </div>
 
-        <div style={{ backgroundColor: '#1A1A1A', border: '1px solid #D4AF37', borderRadius: '8px', padding: '2rem', textAlign: 'center' }}>
-          <h2 style={{ color: '#D4AF37', marginBottom: '1.5rem' }}>🌍 Retrouve-moi</h2>
-          <div style={{ display: 'flex', justifyContent: 'center', gap: '1.5rem', flexWrap: 'wrap' }}>
-            <a href="#" style={{ color: '#D4AF37', textDecoration: 'none', border: '1px solid #D4AF37', padding: '0.5rem 1.2rem', borderRadius: '4px' }}>GitHub</a>
-            <a href="#" style={{ color: '#D4AF37', textDecoration: 'none', border: '1px solid #D4AF37', padding: '0.5rem 1.2rem', borderRadius: '4px' }}>LinkedIn</a>
-            <a href="#" style={{ color: '#D4AF37', textDecoration: 'none', border: '1px solid #D4AF37', padding: '0.5rem 1.2rem', borderRadius: '4px' }}>YouTube</a>
-            <a href="#" style={{ color: '#D4AF37', textDecoration: 'none', border: '1px solid #D4AF37', padding: '0.5rem 1.2rem', borderRadius: '4px' }}>Instagram</a>
+        <div className="bg-[#1A1A1A] border border-[#D4AF37] rounded-lg p-8 text-center">
+
+          <h2 className="text-[#D4AF37] text-2xl font-bold mb-6">
+            🌍 Retrouve-moi
+          </h2>
+
+          <div className="flex justify-center gap-4 flex-wrap">
+            <button className="text-[#D4AF37] border border-[#D4AF37] px-6 py-2 rounded hover:bg-[#D4AF37] hover:text-[#0A0A0A] transition-colors duration-300">
+              GitHub
+            </button>
+            <button className="text-[#D4AF37] border border-[#D4AF37] px-6 py-2 rounded hover:bg-[#D4AF37] hover:text-[#0A0A0A] transition-colors duration-300">
+              LinkedIn
+            </button>
+            <button className="text-[#D4AF37] border border-[#D4AF37] px-6 py-2 rounded hover:bg-[#D4AF37] hover:text-[#0A0A0A] transition-colors duration-300">
+              YouTube
+            </button>
+            <button className="text-[#D4AF37] border border-[#D4AF37] px-6 py-2 rounded hover:bg-[#D4AF37] hover:text-[#0A0A0A] transition-colors duration-300">
+              Instagram
+            </button>
           </div>
+
         </div>
 
       </div>

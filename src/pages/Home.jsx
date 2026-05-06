@@ -1,64 +1,36 @@
+import { Link } from 'react-router-dom'
+
 function Home() {
   return (
-    <div style={{
-      backgroundColor: '#0A0A0A',
-      minHeight: '100vh',
-      display: 'flex',
-      flexDirection: 'column',
-      justifyContent: 'center',
-      alignItems: 'center',
-      textAlign: 'center',
-      padding: '2rem'
-    }}>
-      <h1 style={{
-        color: '#D4AF37',
-        fontSize: '5rem',
-        fontWeight: 'bold',
-        letterSpacing: '0.2rem',
-        marginBottom: '1rem'
-      }}>
+    <div className="bg-[#0A0A0A] min-h-screen flex flex-col justify-center items-center text-center px-8">
+
+      <h1 className="text-[#D4AF37] text-8xl font-bold tracking-widest mb-6">
         MAKA GR
       </h1>
 
-      <p style={{
-        color: '#F5F5F0',
-        fontSize: '1.3rem',
-        marginBottom: '0.5rem'
-      }}>
-        Artiste · ingenieur · Entrepreneur
+      <p className="text-[#F5F5F0] text-xl mb-3">
+        Artiste · Développeur · Entrepreneur
       </p>
 
-      <p style={{
-        color: '#D4AF37',
-        fontSize: '1rem',
-        fontStyle: 'italic',
-        marginBottom: '3rem'
-      }}>
+      <p className="text-[#D4AF37] text-base italic mb-12">
         "L'aigle n'attend pas le vent, il apprend à voler."
       </p>
 
-      <div style={{ display: 'flex', gap: '1.5rem' }}>
-        <a href="/music" style={{
-          backgroundColor: '#D4AF37',
-          color: '#0A0A0A',
-          padding: '0.8rem 2rem',
-          textDecoration: 'none',
-          fontWeight: 'bold',
-          borderRadius: '4px'
-        }}>
+      <div className="flex gap-6">
+        <Link
+          to="/music"
+          className="bg-[#D4AF37] text-[#0A0A0A] px-8 py-3 font-bold rounded hover:bg-[#F0D060] transition-colors duration-300"
+        >
           🎵 Ma Musique
-        </a>
-        <a href="/projects" style={{
-          border: '2px solid #D4AF37',
-          color: '#D4AF37',
-          padding: '0.8rem 2rem',
-          textDecoration: 'none',
-          fontWeight: 'bold',
-          borderRadius: '4px'
-        }}>
+        </Link>
+        <Link
+          to="/projects"
+          className="border-2 border-[#D4AF37] text-[#D4AF37] px-8 py-3 font-bold rounded hover:bg-[#D4AF37] hover:text-[#0A0A0A] transition-colors duration-300"
+        >
           💻 Mes Projets
-        </a>
+        </Link>
       </div>
+
     </div>
   )
 }
