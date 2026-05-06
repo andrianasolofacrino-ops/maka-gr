@@ -7,13 +7,13 @@ function About() {
   ]
 
   return (
-    <div className="bg-[#0A0A0A] min-h-screen px-16 py-16">
+    <div className="bg-[#0A0A0A] min-h-screen py-16" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
 
-      <h1 className="text-[#D4AF37] text-6xl text-center mb-16">
+      <h1 className="text-[#D4AF37] text-5xl text-center mb-16">
         QUI EST MAKA GR ?
       </h1>
 
-      <div className="max-w-3xl mx-auto">
+      <div style={{ maxWidth: '800px', width: '100%', padding: '0 2rem' }}>
 
         <p className="text-[#F5F5F0] text-lg leading-relaxed mb-6">
           Je suis <span className="text-[#D4AF37] font-bold">Théogène Facrino</span>,
@@ -27,31 +27,20 @@ function About() {
           Je vis entre deux mondes : la musique africaine et la technologie du futur.
         </p>
 
-        <h2 className="text-[#D4AF37] text-4xl mb-8">
-          Mes Valeurs
-        </h2>
+        <h2 className="text-[#D4AF37] text-3xl mb-8">Mes Valeurs</h2>
 
-        <div className="grid grid-cols-2 gap-6 mb-16">
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem', marginBottom: '4rem' }}>
           {valeurs.map((valeur, index) => (
-            <div
-              key={index}
-              className="bg-[#1A1A1A] border border-[#D4AF37] rounded-lg p-6 hover:bg-[#D4AF37] transition-colors duration-300 group"
-            >
-              <h3 className="text-[#D4AF37] group-hover:text-[#0A0A0A] text-xl mb-3">
-                {valeur.titre}
-              </h3>
-              <p className="text-[#F5F5F0] group-hover:text-[#0A0A0A] text-sm leading-relaxed">
-                {valeur.texte}
-              </p>
+            <div key={index} style={{ backgroundColor: '#1A1A1A', border: '1px solid #D4AF37', borderRadius: '8px', padding: '1.5rem' }}>
+              <h3 className="text-[#D4AF37] text-xl mb-3">{valeur.titre}</h3>
+              <p className="text-[#F5F5F0] text-sm leading-relaxed">{valeur.texte}</p>
             </div>
           ))}
         </div>
 
-        <h2 className="text-[#D4AF37] text-4xl mb-6">
-          Ma Mission
-        </h2>
+        <h2 className="text-[#D4AF37] text-3xl mb-6">Ma Mission</h2>
 
-        <p className="text-[#F5F5F0] text-lg leading-relaxed italic border-l-4 border-[#D4AF37] pl-6">
+        <p className="text-[#F5F5F0] text-lg leading-relaxed italic" style={{ borderLeft: '4px solid #D4AF37', paddingLeft: '1.5rem' }}>
           "Sortir de la pauvreté durablement par la compétence, la discipline
           et la création de valeur — pour moi, pour ma famille,
           et pour Madagascar et l'Afrique."
