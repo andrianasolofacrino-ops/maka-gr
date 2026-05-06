@@ -2,24 +2,30 @@ import { Link } from 'react-router-dom'
 
 function Navbar() {
   return (
-    <nav style={{
-      backgroundColor: '#0A0A0A',
-      borderBottom: '1px solid #D4AF37',
-      padding: '1rem 2rem',
-      display: 'flex',
-      justifyContent: 'space-between',
-      alignItems: 'center'
-    }}>
-      <span style={{ color: '#D4AF37', fontSize: '1.5rem', fontWeight: 'bold' }}>
+    <nav className="bg-[#0A0A0A] border-b border-[#D4AF37] px-8 py-4 flex justify-between items-center">
+      
+      <span className="text-[#D4AF37] text-2xl font-bold tracking-widest">
         MAKA GR
       </span>
-      <div style={{ display: 'flex', gap: '2rem' }}>
-        <Link to="/" style={{ color: '#F5F5F0', textDecoration: 'none' }}>Home</Link>
-        <Link to="/about" style={{ color: '#F5F5F0', textDecoration: 'none' }}>About</Link>
-        <Link to="/music" style={{ color: '#F5F5F0', textDecoration: 'none' }}>Music</Link>
-        <Link to="/projects" style={{ color: '#F5F5F0', textDecoration: 'none' }}>Projects</Link>
-        <Link to="/contact" style={{ color: '#F5F5F0', textDecoration: 'none' }}>Contact</Link>
+
+      <div className="flex gap-8">
+        <Link to="/" className="text-[#F5F5F0] hover:text-[#D4AF37] transition-colors duration-300">
+          Home
+        </Link>
+        <Link to="/about" className="text-[#F5F5F0] hover:text-[#D4AF37] transition-colors duration-300">
+          About
+        </Link>
+        <Link to="/music" className="text-[#F5F5F0] hover:text-[#D4AF37] transition-colors duration-300">
+          Music
+        </Link>
+        <Link to="/projects" className="text-[#F5F5F0] hover:text-[#D4AF37] transition-colors duration-300">
+          Projects
+        </Link>
+        <Link to="/contact" className="text-[#F5F5F0] hover:text-[#D4AF37] transition-colors duration-300">
+          Contact
+        </Link>
       </div>
+
     </nav>
   )
 }
