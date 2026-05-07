@@ -6,6 +6,7 @@ import About from './pages/About'
 import Music from './pages/Music'
 import Projects from './pages/Projects'
 import Contact from './pages/Contact'
+import NotFound from './pages/NotFound'
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="/music" element={<Music />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
       <Footer />
