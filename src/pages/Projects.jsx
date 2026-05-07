@@ -9,7 +9,7 @@ function Projects() {
     },
     {
       nom: 'SISA²',
-      description: 'Système IoT solaire intelligent basé sur ESP32. Gestion et monitoring d\'énergie solaire en temps réel.',
+      description: "Système IoT solaire intelligent basé sur ESP32. Gestion et monitoring d'énergie solaire en temps réel.",
       stack: ['ESP32', 'IoT', 'C++', 'Dashboard'],
       statut: 'En cours',
       emoji: '☀️'
@@ -24,9 +24,9 @@ function Projects() {
   ]
 
   return (
-    <div className="bg-[#0A0A0A] min-h-screen px-8 py-16">
+    <div className="bg-[#0A0A0A] min-h-screen py-16" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
 
-      <h1 className="text-[#D4AF37] text-5xl font-bold text-center mb-4">
+      <h1 className="text-[#D4AF37] text-5xl text-center mb-4">
         MES PROJETS
       </h1>
 
@@ -34,38 +34,25 @@ function Projects() {
         Web · IoT · Intelligence Artificielle
       </p>
 
-      <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div style={{ maxWidth: '900px', width: '100%', padding: '0 2rem', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '2rem' }}>
 
         {projets.map((projet, index) => (
-          <div
-            key={index}
-            className="bg-[#1A1A1A] border border-[#D4AF37] rounded-lg p-6 hover:border-[#F0D060] transition-colors duration-300"
-          >
-            <div className="text-5xl mb-4">{projet.emoji}</div>
-
-            <h2 className="text-[#D4AF37] text-xl font-bold mb-3">
-              {projet.nom}
-            </h2>
-
-            <p className="text-[#F5F5F0] text-sm leading-relaxed mb-6">
+          <div key={index} style={{ backgroundColor: '#1A1A1A', border: '1px solid #D4AF37', borderRadius: '8px', padding: '2rem' }}>
+            <div style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>{projet.emoji}</div>
+            <h2 className="text-[#D4AF37] text-2xl mb-3">{projet.nom}</h2>
+            <p style={{ color: '#F5F5F0', fontSize: '0.95rem', lineHeight: '1.7', marginBottom: '1.5rem' }}>
               {projet.description}
             </p>
-
-            <div className="flex flex-wrap gap-2 mb-6">
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem', marginBottom: '1.5rem' }}>
               {projet.stack.map((tech, i) => (
-                <span
-                  key={i}
-                  className="bg-[#0A0A0A] text-[#D4AF37] border border-[#D4AF37] text-xs px-3 py-1 rounded-full"
-                >
+                <span key={i} style={{ color: '#D4AF37', border: '1px solid #D4AF37', padding: '0.2rem 0.7rem', borderRadius: '9999px', fontSize: '0.75rem' }}>
                   {tech}
                 </span>
               ))}
             </div>
-
-            <span className={`text-sm font-bold ${projet.statut === 'Terminé' ? 'text-green-400' : 'text-[#D4AF37]'}`}>
+            <span style={{ color: projet.statut === 'Terminé' ? '#4CAF50' : '#D4AF37', fontWeight: 'bold', fontSize: '0.9rem' }}>
               ● {projet.statut}
             </span>
-
           </div>
         ))}
 

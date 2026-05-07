@@ -6,9 +6,9 @@ function Music() {
   ]
 
   return (
-    <div className="bg-[#0A0A0A] min-h-screen px-8 py-16">
+    <div className="bg-[#0A0A0A] min-h-screen py-16" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
 
-      <h1 className="text-[#D4AF37] text-5xl font-bold text-center mb-4">
+      <h1 className="text-[#D4AF37] text-5xl text-center mb-4">
         MA MUSIQUE
       </h1>
 
@@ -16,44 +16,36 @@ function Music() {
         Afrobeat · Afropop · Madagascar
       </p>
 
-      <div className="max-w-3xl mx-auto">
+      <div style={{ maxWidth: '800px', width: '100%', padding: '0 2rem' }}>
 
-        <h2 className="text-[#D4AF37] text-2xl font-bold mb-6">
-          🎵 Mes Titres
-        </h2>
+        <h2 className="text-[#D4AF37] text-3xl mb-6">🎵 Mes Titres</h2>
 
         {tracks.map((track, index) => (
-          <div key={index} className="bg-[#1A1A1A] border border-[#D4AF37] rounded-lg px-6 py-4 mb-4 flex justify-between items-center">
-            <div className="flex items-center gap-4">
-              <span className="text-[#D4AF37] text-2xl">▶</span>
+          <div key={index} style={{ backgroundColor: '#1A1A1A', border: '1px solid #D4AF37', borderRadius: '8px', padding: '1rem 1.5rem', marginBottom: '1rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
+              <span style={{ color: '#D4AF37', fontSize: '1.5rem' }}>▶</span>
               <div>
-                <p className="text-[#F5F5F0] font-bold">{track.titre}</p>
-                <p className="text-[#888] text-sm">MAKA GR</p>
+                <p style={{ color: '#F5F5F0', fontWeight: 'bold', margin: 0 }}>{track.titre}</p>
+                <p style={{ color: '#888', fontSize: '0.85rem', margin: 0 }}>MAKA GR</p>
               </div>
             </div>
-            <div className="flex items-center gap-6">
-              <span className="text-[#888]">{track.duree}</span>
-              <span className="text-[#D4AF37] border border-[#D4AF37] text-xs px-3 py-1 rounded-full">
+            <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem' }}>
+              <span style={{ color: '#888' }}>{track.duree}</span>
+              <span style={{ color: '#D4AF37', border: '1px solid #D4AF37', padding: '0.2rem 0.6rem', borderRadius: '9999px', fontSize: '0.75rem' }}>
                 {track.statut}
               </span>
             </div>
           </div>
         ))}
 
-        <div className="bg-[#1A1A1A] border border-[#D4AF37] rounded-lg p-8 text-center mt-12">
-          <h2 className="text-[#D4AF37] text-2xl font-bold mb-6">
-            🎧 Retrouve-moi sur
-          </h2>
-          <div className="flex justify-center gap-6">
-            <button className="text-[#D4AF37] border border-[#D4AF37] px-6 py-2 rounded hover:bg-[#D4AF37] hover:text-[#0A0A0A] transition-colors duration-300">
-              Spotify
-            </button>
-            <button className="text-[#D4AF37] border border-[#D4AF37] px-6 py-2 rounded hover:bg-[#D4AF37] hover:text-[#0A0A0A] transition-colors duration-300">
-              YouTube
-            </button>
-            <button className="text-[#D4AF37] border border-[#D4AF37] px-6 py-2 rounded hover:bg-[#D4AF37] hover:text-[#0A0A0A] transition-colors duration-300">
-              Apple Music
-            </button>
+        <div style={{ backgroundColor: '#1A1A1A', border: '1px solid #D4AF37', borderRadius: '8px', padding: '2rem', textAlign: 'center', marginTop: '3rem' }}>
+          <h2 className="text-[#D4AF37] text-2xl mb-6">🎧 Retrouve-moi sur</h2>
+          <div style={{ display: 'flex', justifyContent: 'center', gap: '1rem', flexWrap: 'wrap' }}>
+            {['Spotify', 'YouTube', 'Apple Music'].map((p, i) => (
+              <button key={i} style={{ color: '#D4AF37', border: '1px solid #D4AF37', padding: '0.5rem 1.2rem', borderRadius: '4px', backgroundColor: 'transparent', cursor: 'pointer' }}>
+                {p}
+              </button>
+            ))}
           </div>
         </div>
 
